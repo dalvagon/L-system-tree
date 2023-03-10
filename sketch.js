@@ -4,7 +4,7 @@ let len = 70;
 
 function setup() {
   createCanvas(1000, 600);
-  background(0);
+  background(255);
   angleMode(DEGREES);
 
   ruleset.push(
@@ -47,13 +47,12 @@ function tree(text) {
   let y = height;
   let angle = 30;
   translate(x, y);
-  console.log(text);
   for (let c of text) {
     switch (c) {
       case "F":
         stroke(20, 100, 20, map(len, 0, 70, 50, 255));
-        strokeWeight(map(len, 0, 70, 1, 5));
-        y = -len + random(-len / 2, len / 2);
+        strokeWeight(map(len, 0, 70, 1, 10));
+        y = -len + random(-len / 10, len / 10);
         line(0, 0, 0, y);
         translate(0, y);
         break;
